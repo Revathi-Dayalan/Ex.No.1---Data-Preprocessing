@@ -32,10 +32,84 @@ Normalizing the data
 Splitting the data into test and train
 
 ## PROGRAM:
-/Write your code here/
+```
+# Importing Libraries
+import pandas as pd
+import io
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
 
+#Read the dataset
+df=pd.read_csv('Churn_Modelling.csv')
+df
+
+#Checking for null values
+df.isnull().sum()
+
+#Checking for dulpicated values
+df.duplicated()
+
+#Dropping unwanted columns
+df.drop('RowNumber',axis=1,inplace=True)
+df.drop('CustomerId',axis=1,inplace=True)
+df.drop('Age',axis=1,inplace=True)
+df.drop('Gender',axis=1,inplace=True)
+df.drop('Surname',axis=1,inplace=True)
+df.drop('Geography',axis=1,inplace=True)
+df
+
+#Normalising using MinMaxScaler
+ms=MinMaxScaler()
+df2=pd.DataFrame(ms.fit_transform(df))
+df2
+
+#Splitting the dataset - x
+X=df2.iloc[:,:-1].values
+X
+
+#Splitting the dataset - y
+y=df2.iloc[:,-1].values
+y
+
+# Training the dataset
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+print(X_train)
+print("X_train: ",len(X_train))
+print(X_test)
+print("Size of X_test: ",len(X_test))
+
+```
 ## OUTPUT:
-/ Show the result/
+
+Read Dataset
+![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/da08c00f-326d-4ebe-bf3f-d6b26841f404)
+
+Checking for Null values
+![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/1644ff14-c5de-4c6a-9c5d-d2c956780e41)
+
+Checking for duplicated values
+![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/37d52aa2-0d11-4bff-98ff-e5d7acfdfe1d)
+
+Dropping off unwanted values
+
+![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/96500729-3d55-4c3d-9b01-88584320e238)
+
+Normalised data using MinMaxScaler
+
+![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/844a96fa-42c8-484b-8edb-5315f8236f3a)
+
+Split values of X dataset
+
+![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/442e82e7-c649-4eb6-afd3-5ef6133a6715)
+
+Split values of y dataset:
+![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/0e49ceac-f611-4680-aee9-3bb0380e1543)
+
+Training the dataset:
+![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/bd924bed-5d50-4177-aabf-7641fd697f81)
 
 ## RESULT
-/Type your result here/
+Thus the given data is been processed successfully.
+
+
