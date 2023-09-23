@@ -83,31 +83,49 @@ print("Size of X_test: ",len(X_test))
 ## OUTPUT:
 
 Read Dataset
+
 ![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/da08c00f-326d-4ebe-bf3f-d6b26841f404)
 
+
 Checking for Null values
+
 ![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/1644ff14-c5de-4c6a-9c5d-d2c956780e41)
 
+
 Checking for duplicated values
+
 ![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/37d52aa2-0d11-4bff-98ff-e5d7acfdfe1d)
+
 
 Dropping off unwanted values
 
+
 ![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/96500729-3d55-4c3d-9b01-88584320e238)
+
 
 Normalised data using MinMaxScaler
 
+
 ![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/844a96fa-42c8-484b-8edb-5315f8236f3a)
+
 
 Split values of X dataset
 
+
 ![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/442e82e7-c649-4eb6-afd3-5ef6133a6715)
 
+
 Split values of y dataset:
+
+
 ![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/0e49ceac-f611-4680-aee9-3bb0380e1543)
 
+
 Training the dataset:
+
+
 ![image](https://github.com/Revathi-Dayalan/Ex.No.1---Data-Preprocessing/assets/96000574/bd924bed-5d50-4177-aabf-7641fd697f81)
+
 
 ## RESULT
 Thus the given data is been processed successfully.
